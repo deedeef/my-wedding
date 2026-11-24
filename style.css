@@ -1,0 +1,87 @@
+:root {
+    --ivory: #F4EFE5;
+    --burgundy: #762D42;
+    --sage: #89947B;
+    --gold: #C5A266;
+    --dark: #302923;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--ivory);
+    color: var(--dark);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* MAIN CONTAINER */
+
+.invitation-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+
+
+.welcome-screen {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.small-heading {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--sage);
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 9vw, 58px);
+    font-weight: 400;
+    color: var(--burgundy);
+}
+
+h1 span {
+    color: var(--gold);
+}
+
+.invitation-message {
+    font-size: 13px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+.envelope-placeholder {
+    width: 260px;
+    height: 170px;
+    background: #E9DECC;
+    border: 1px solid var(--gold);
+    margin: 55px auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 30px rgba(48, 41, 35, 0.12);
+}display
+
+.envelope-placeholder p {
+    color: var(--burgundy);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+}
+
+.open-instruction {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--burgundy);
+}
