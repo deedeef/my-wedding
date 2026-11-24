@@ -52,8 +52,8 @@ background:var(--card) url("card-floral-landscape.png") center/cover no-repeat; 
   transition:transform 1.2s cubic-bezier(.3,.7,.2,1) 1.1s;
   z-index:1;
 }
-@media (min-aspect-ratio:1/1){
-  .card{ left:calc(50% - 250px); right:calc(50% - 250px); }
+@media (max-aspect-ratio:1/1){
+  .card{ background-image:url("card-floral-landscape.png"); }
 }
 .front, .flap {
   inset:0;
