@@ -458,7 +458,7 @@ var TRADITIONAL_GUESTS = ["divine","seun","daniel"];
   if (pre) input.value = pre;
 
   function renderEvents(group){
-    document.getElementById("greet").textContent = group.greeting;
+    document.getElementById("greet").innerHTML = group.greeting;
     document.getElementById("rsvp").href = RSVP_URL;
     var list = document.getElementById("events"); list.innerHTML = "";
     group.events.forEach(function(id){
