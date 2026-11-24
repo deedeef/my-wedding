@@ -423,17 +423,38 @@ var RSVP_URL = "#";   // paste your RSVP form link here, inside the quotes
 
 // Group 1: All events, including the after-party
 var FRIENDS = [
-  "danai","ada","lizzie","chris","ashleigh",
-  "dan","dolapo","emmanuel","melissa","tom",
-  "joel","bishara","favour","goodness","mabel",
-  "jemina","precious","phoebe"
+  "danai","ada","lizzie","chris","ashleigh","mark","divine",
+  "daniel","dolapo","emmanuel","melissa","tom",
+  "joel","bishara","favour","goodness","mabel","john","omolayo","claire","spencer",
+  "jemina","precious","phoebe","osahon","samuel","victor","alex","beth"
 ];
+var NICKNAMES = {
+  "danai":"Dee",
+  "mabel":"Queen",
+  "bishara":"Main",
+  "daniel":"Dan",
+  "john":"Fine man",
+  "omolayo":"Mummy",
+  "claire":"Mum",
+  "spencer":"Dad",
+  "jemina":"Jemi baby",
+  "osahon":"Princess",
+  "samuel":"Black0",
+  "divine":"Bride",
+  "mark":"Groom",
+  "kehinde":"Aunty Kehinde",
+  "oluwaseun":"Aunty Seun",
+};
+function displayName(n){
+  var key=n.trim().toLowerCase();
+  return NICKNAMES[key] || n;
+}
 // Group 2: Church ceremony and reception
 var CEREMONY_GUESTS = [];
 // Group 3: Evening party only
 var EVENING_GUESTS = [];
 // Group 4: Both traditional ceremonies, church and reception (no after-party)
-var TRADITIONAL_GUESTS = ["divine","seun","daniel"];
+var TRADITIONAL_GUESTS = ["kehinde","oluwaseun","sola"];
 
 /* =====================================================
    PAGE LOGIC
@@ -493,7 +514,7 @@ var TRADITIONAL_GUESTS = ["divine","seun","daniel"];
     else if(TRADITIONAL_GUESTS.indexOf(guestName) > -1){ groupName = "traditional"; }
 
     var group = GUESTS[params.get("g")] || GUESTS[groupName];
-    document.getElementById("cardLine").textContent = "Dear " + joinNames(names.map(cap)) + ",";
+    document.getElementById("cardLine").textContent = "Dear " + joinNames(names.map(function(n){return cap(displayName(n));})) + ",";
     document.getElementById("cardSub").textContent = "you are invited";
     renderEvents(group);
     opened = true;
